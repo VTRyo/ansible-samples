@@ -1,0 +1,5 @@
+- hosts: testserver
+  become: True
+  roles:
+    - vpc-build
+    - ec2-build

@@ -1,0 +1,4 @@
+- hosts: all
+  connection: local
+  tasks:
+    - debug: msg="{{ test_message }}"

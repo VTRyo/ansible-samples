@@ -1,3 +1,77 @@
+# HOW TO This Repository
+
+## 1. Fork
+
+```
+https://github.com/VTRyo/ansible-samples.git
+```
+
+## 2. 暗号化なしで実行してみる
+
+```
+cd ansible-vault
+```
+
+```
+ansible-playbook -i hosts vault-playbook.yml --check
+```
+
+実行結果にはメッセージが表示されたでしょうか？
+
+## 3. 変数を暗号化する
+
+```
+ansible-vault encrypt group_vars/all
+New Vault password: <input your password>
+```
+
+暗号化されたか確認する。
+
+```
+cat group_vars/all
+```
+
+## 4. 2.の作業を再度実行してみる
+
+```
+ansible-playbook -i hosts vault-playbook.yml --check
+```
+
+実行できないことを確認。
+
+## 5. 暗号化されたファイルを読み込んで実行する
+
+```
+ansible-playbook -i hosts vault-plabook.yml --check --ask-vault-pass
+Vault password:
+```
+
+2.と同様の結果が得られたか確認する。
+
+## 6. 暗号化をかけたファイルの中身を確認する
+
+```
+ansible-vault view group_vars/all
+Vault password: <input your password>
+```
+
+中身が確認できたか確認する。
+
+## 7. 暗号化ファイルを複合化する
+
+```
+ansible-vault decrypt group_vars/all 
+Vault password: <input your password>
+Decryption successful
+```
+
+```
+cat group_vars/all
+```
+
+ファイルが平文になっていることを確認する。
+
+
 # HOW TO ansible-vault
 
 * syntax

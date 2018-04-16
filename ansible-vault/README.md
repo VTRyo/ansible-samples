@@ -80,12 +80,6 @@ cat group_vars/all
 Usage：ansible-vault [create|decrypt|edit|encrypt|encrypt_string|rekey|view] [options] [vaultfile.yml]
 ```
 
-* 
-
-```
-ansible-playbook -i hosts site.yml --ask-vault-pass
-```
-
 ## Detail Usage
 
 * 新規ファイルの暗号化

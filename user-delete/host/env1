@@ -1,0 +1,6 @@
+[env1]
+server1
+server2
+
+[prd:children]
+env1

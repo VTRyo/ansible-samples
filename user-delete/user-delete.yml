@@ -1,0 +1,9 @@
+- hosts: env1
+  become: True
+  roles:
+    - userdel
+
+- hosts: env2
+  become: True
+  roles:
+    - userdel

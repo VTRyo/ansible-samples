@@ -1,0 +1,10 @@
+- name: user delete
+  user:
+    name: "{{ item.name }}"
+    createhome: yes
+    state: absent
+    remove: yes
+  with_items:
+    - { name: "VTRyo" }
+    - { name: "dareda" }
+    - { name: "omaeha" }

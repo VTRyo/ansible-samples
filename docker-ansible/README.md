@@ -18,8 +18,8 @@ ansible-containerというツールがansibleから公式で提供されてい�
 
 * 前提
 
-・macOS
-・docker daemonが動いていること
+・macOS<br>
+・docker daemonが動いていること<br>
 ・packerがインストールされていること
 
 ## Fork

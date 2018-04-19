@@ -42,7 +42,7 @@ ansible-playbook -i hosts vault-playbook.yml --check
 ## 5. 暗号化されたファイルを読み込んで実行する
 
 ```
-ansible-playbook -i hosts vault-plabook.yml --check --ask-vault-pass
+ansible-playbook -i hosts vault-playbook.yml --check --ask-vault-pass
 Vault password: <inpiut your password>
 ```
 
